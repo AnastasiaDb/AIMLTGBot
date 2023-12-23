@@ -3,127 +3,253 @@
 <!-- ACQUAINTANCE -->
 
 <aiml>
-  <category>
-    <pattern>_ меня зовут *</pattern>
-    <template>
-        <srai>меня зовут <star/></srai>
-    </template>
-  </category>
+	<category>
+		<pattern>_ меня зовут *</pattern>
+		<template>
+			<srai>
+				меня зовут <star/>
+			</srai>
+		</template>
+	</category>
 
-  <category>
-    <pattern>привет *</pattern>
-    <template>
-        <srai>меня зовут <star/></srai>
-    </template>
-  </category> 
-  
-  <category>
-    <pattern>меня зовут *</pattern>
-    <template>
-      <random>
-        <li>Здравствуйте, <set name="user-name"><star /></set>!
-        </li>
-        <li>Добро пожаловать, <set name="user-name"><star /></set>!
-        </li>
-      </random>
-    </template>
-  </category>
+	<category>
+		<pattern>привет *</pattern>
+		<template>
+			<srai>
+				меня зовут <star/>
+			</srai>
+		</template>
+	</category>
 
-  <category>
-    <pattern>кто ты</pattern>
-    <template>
-      <random>
-        <li>Я Кофе Бот, ваш личный бариста.</li>
-        <li>Кофе Бот в вашем распоряжении!</li>
-      </random>
-    </template>
-  </category>
-  
-  <category>
-    <pattern>РАССКАЖИ О СЕБЕ</pattern>
-    <template>
-      <srai>кто ты</srai>
-    </template>
-  </category>
+	<category>
+		<pattern>меня зовут *</pattern>
+		<template>
+			<random>
+				<li>
+					Здравствуйте, <set name="user-name">
+						<star />
+					</set>!
+				</li>
+				<li>
+					Добро пожаловать, <set name="user-name">
+						<star />
+					</set>!
+				</li>
+			</random>
+		</template>
+	</category>
 
-    <!-- Общий рассказ о кофе -->
-  <category>
-    <pattern>расскажи о кофе</pattern>
-    <template>
-    <random>
-      <li>Кофе - это удивительный напиток, который завораживает своим богатым вкусом и ароматом.Он является неотъемлемой частью многих культур и обрядов по всему миру.В зависимости от сорта и способа приготовления, кофе может быть крепким эспрессо,нежным латте, насыщенным американо или кремовым капуччино. Выбор вида кофезависит от ваших предпочтений и настроения. А какой вид кофе вы предпочитаете?</li>
-      <li>Кофе — это не просто напиток, это волшебное слияние аромата и вкуса. Наслаждение каждой чашкой — это как вдохновляющее путешествие в тропические уголки, где родился этот удивительный напиток.</li>
-      </random>
-    </template>
-  </category>
+	<!-- ПРИВЕТСТВИЕ -->
 
-    <category>
-    <pattern>* о кофе *</pattern>
-    <template>
-        <srai>расскажи о кофе</srai>
-    </template>
-  </category>
+	<category>
+		<pattern>привет</pattern>
+		<template>
+			<random>
+				<li>
+					Привет, <get name="user-name"/>
+				</li>
+				<li>
+					Приветствую, <get name="user-name"/>
+				</li>
+				<li>
+					Здравствуйте, <get name="user-name"/>
+				</li>
+				<li>
+					Доброго времени суток, <get name="user-name"/>
+				</li>
+			</random>
+		</template>
+	</category>
 
-    <category>
-    <pattern>что ты знаешь о кофе *</pattern>
-    <template>
-        <srai>расскажи о кофе</srai>
-    </template>
-  </category>
+	<category>
+		<pattern>/start</pattern>
+		<template>
+			<srai>привет</srai>
+		</template>
+	</category>
 
-    <category>
-    <pattern>расскажи о кофе *</pattern>
-    <template>
-        <srai>расскажи о кофе</srai>
-    </template>
-  </category>
+	<category>
+		<pattern>start</pattern>
+		<template>
+			<srai>привет</srai>
+		</template>
+	</category>
 
-    <category>
-    <pattern>расскажи * о кофе</pattern>
-    <template>
-        <srai>расскажи о кофе</srai>
-    </template>
-  </category>
+	<category>
+		<pattern>hello</pattern>
+		<template>
+			<srai>привет</srai>
+		</template>
+	</category>
 
-    <category>
-    <pattern>* черное золото *</pattern>
-    <template>
-       <srai>черное золото</srai>
-    </template>
-  </category>
+	<category>
+		<pattern>добрый день</pattern>
+		<template>
+			<srai>привет</srai>
+		</template>
+	</category>
 
-      <category>
-    <pattern>* черным золотом *</pattern>
-    <template>
-       <srai>черное золото</srai>
-    </template>
-  </category>
+	<category>
+		<pattern>приветули</pattern>
+		<template>
+			<srai>привет</srai>
+		</template>
+	</category>
 
-    <category>
-    <pattern>черное золото</pattern>
-    <template>
-       Кофе называют "черным золотом" за его богатство, ценность и способность соединять людей. Этот напиток стал символом общения, радости и культурного наследия.
-    </template>
-  </category>
-  
- <category>
-    <pattern>Что ты умеешь</pattern>
-    <template>
-      Волшебное — рассказывать о мире кофе!
-    </template>
-  </category>
-  
-  <category>
-    <pattern>Аудио</pattern>
-    <template>Жаль, я не умею слушать, но могу вас научить, как правильно заваривать кофе!</template>
-  </category>
-  <category>
-    <pattern>Видео</pattern>
-    <template>Спасибо, но, кажется, у меня сломалась кнопка запуска видео. Могу поделиться информацией о кофе в текстовом формате!</template>
-  </category>
-  
-  <category>
-    <pattern>*</pattern>
-    <template>Я такое не знаю, давайте лучше поговорим о кофе, <get name="user-name"/> </template>
-  </category>
+	<category>
+		<pattern>доброго времени суток</pattern>
+		<template>
+			<srai>привет</srai>
+		</template>
+	</category>
+
+	<!-- ЧТО УМЕЕТ БОТ -->
+
+	<category>
+		<pattern>кто ты</pattern>
+		<template>
+			<random>
+				<li>Я Кофе Бот, ваш личный бариста.</li>
+				<li>Я - Кофе Бот, ваш гид в мире ароматного и насыщенного кофеином удовольствия.</li>
+				<li>Я - Кофе Бот - ваш виртуальный проводник в увлекательный мир кофе.</li>
+			</random>
+			<li>
+				Вот что я могу вам рассказать:
+				<br/>1. Интересные истории о происхождении кофе.
+				<br/>2. Простые и вкусные рецепты по приготовлению кофейных напитков.
+				<br/>3. Экскурс по различным сортам кофе и ароматам.
+				<br/>4. Интересные факты об этом уникальном напитке.
+			</li>
+			Рассказать вам что-нибудь?
+		</template>
+	</category>
+
+	<category>
+		<pattern>РАССКАЖИ О СЕБЕ</pattern>
+		<template>
+			<srai>кто ты</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>ты кто</pattern>
+		<template>
+			<srai>кто ты</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>что умеешь</pattern>
+		<template>
+			<srai>кто ты</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* что умеешь</pattern>
+		<template>
+			<srai>кто ты</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>что ты умеешь</pattern>
+		<template>
+			<srai>кто ты</srai>
+		</template>
+	</category>
+
+	<!-- ПОЛУЧЕНИЕ ТЕМЫ ОТ ПОЛЬЗОВАТЕЛЯ -->
+	<category>
+		<pattern> ДА </pattern>
+		<that>
+			Рассказать вам что-нибудь?
+		</that>
+		<template>
+			Nice, I like movies too.
+		</template>
+	</category>
+
+	<!-- Общий рассказ о кофе -->
+	<category>
+		<pattern>расскажи о кофе</pattern>
+		<template>
+			<random>
+				<li>Кофе - это удивительный напиток, который завораживает своим богатым вкусом и ароматом.Он является неотъемлемой частью многих культур и обрядов по всему миру.В зависимости от сорта и способа приготовления, кофе может быть крепким эспрессо,нежным латте, насыщенным американо или кремовым капуччино. Выбор вида кофезависит от ваших предпочтений и настроения. А какой вид кофе вы предпочитаете?</li>
+				<li>Кофе — это не просто напиток, это волшебное слияние аромата и вкуса. Наслаждение каждой чашкой — это как вдохновляющее путешествие в тропические уголки, где родился этот удивительный напиток.</li>
+			</random>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* о кофе *</pattern>
+		<template>
+			<srai>расскажи о кофе</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>что ты знаешь о кофе *</pattern>
+		<template>
+			<srai>расскажи о кофе</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>расскажи о кофе *</pattern>
+		<template>
+			<srai>расскажи о кофе</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>расскажи * о кофе</pattern>
+		<template>
+			<srai>расскажи о кофе</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* черное золото *</pattern>
+		<template>
+			<srai>черное золото</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* черным золотом *</pattern>
+		<template>
+			<srai>черное золото</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>черное золото</pattern>
+		<template>
+			Кофе называют "черным золотом" за его богатство, ценность и способность соединять людей. Этот напиток стал символом общения, радости и культурного наследия.
+		</template>
+	</category>
+
+	<category>
+		<pattern>Что ты умеешь</pattern>
+		<template>
+			Волшебное — рассказывать о мире кофе!
+		</template>
+	</category>
+
+	<category>
+		<pattern>Аудио</pattern>
+		<template>Жаль, я не умею слушать, но могу вас научить, как правильно заваривать кофе!</template>
+	</category>
+	<category>
+		<pattern>Видео</pattern>
+		<template>Спасибо, но, кажется, у меня сломалась кнопка запуска видео. Могу поделиться информацией о кофе в текстовом формате!</template>
+	</category>
+
+	<category>
+		<pattern>*</pattern>
+		<template>
+			Я такое не знаю, давайте лучше поговорим о кофе, <get name="user-name"/>
+		</template>
+	</category>
 </aiml>
