@@ -3,7 +3,6 @@
 <!-- ACQUAINTANCE -->
 
 <aiml>
-  
   <category>
     <pattern>_ меня зовут *</pattern>
     <template>
