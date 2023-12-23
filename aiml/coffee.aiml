@@ -124,20 +124,20 @@
 		</template>
 	</category>
 
-  <category>
-    <pattern>да</pattern>
-    <template>
-      Отлично! Что именно вас интересует? Могу поделиться рецептами, рассказать об истории кофе или ещё о чём-то?
-    </template>
-  </category>
+	<category>
+		<pattern>да</pattern>
+		<template>
+			Отлично! Что именно вас интересует? Могу поделиться рецептами, рассказать об истории кофе или ещё о чём-то?
+		</template>
+	</category>
 
-  <category>
-    <pattern>нет</pattern>
-    <template>
-      Жаль, что вы не заинтересованы. Если у вас возникнут вопросы или вы захотите узнать что-то позже, не стесняйтесь возвращаться. Удачного дня!
-    </template>
-  </category>
-  
+	<category>
+		<pattern>нет</pattern>
+		<template>
+			Жаль, что вы не заинтересованы. Если у вас возникнут вопросы или вы захотите узнать что-то позже, не стесняйтесь возвращаться. Удачного дня!
+		</template>
+	</category>
+
 	<category>
 		<pattern>РАССКАЖИ О СЕБЕ</pattern>
 		<template>
@@ -251,6 +251,100 @@
 		</template>
 	</category>
 
+	<!-- КАК ДЕЛА -->
+
+	<category>
+		<pattern>* как дела</pattern>
+		<template>
+			<srai>как дела</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>как дела *</pattern>
+		<template>
+			<srai>как дела</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* как жизнь</pattern>
+		<template>
+			<srai>как дела</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>как жизнь</pattern>
+		<template>
+			<srai>как дела</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>как жизнь *</pattern>
+		<template>
+			<srai>как дела</srai>
+		</template>
+	</category>
+
+
+	<category>
+		<pattern>как ты *</pattern>
+		<template>
+			<srai>как дела</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* как ты</pattern>
+		<template>
+			<srai>как дела</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>как ты</pattern>
+		<template>
+			<srai>как дела</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>как поживаешь *</pattern>
+		<template>
+			<srai>как дела</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* как поживаешь</pattern>
+		<template>
+			<srai>как дела</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>как поживаешь</pattern>
+		<template>
+			<srai>как дела</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>как дела</pattern>
+		<template>
+			<random>
+				<li>Прекрасно. А если интересно, я могу поделиться увлекательными фактами о кофе!</li>
+				<li>Отлично! И кстати, у меня есть несколько новых рецептов кофейных напитков для вас.</li>
+				<li>Замечательно. Если хотите, расскажу вам об интересных сортах кофе.</li>
+				<li>Все в порядке. А еще я готов рассказать вам что-то о кофе.</li>
+			</random>
+		</template>
+	</category>
+
+
+
 	<category>
 		<pattern>Аудио</pattern>
 		<template>Жаль, я не умею слушать, но могу вас научить, как правильно заваривать кофе!</template>
@@ -263,7 +357,19 @@
 	<category>
 		<pattern>*</pattern>
 		<template>
-			Я такое не знаю, давайте лучше поговорим о кофе, <get name="user-name"/>
+			<random>
+				<li>
+					Прошу прощения, но я не располагаю информацией по этому вопросу. Расскажите мне, какой кофейный напиток вы предпочитаете, <get name="user-name"/>?
+				</li>
+				<li>Мне не известно об этом. Может быть, вы хотели бы узнать что-то о кофе? Например, о его истории или рецептах приготовления.</li>
+				<li>Извините, но у меня нет ответа на этот вопрос. Давайте переключимся на тему кофе. Есть что-то конкретное, что вы хотели бы узнать?</li>
+				<li>
+					К сожалению, я не обладаю информацией по этому запросу. Расскажите мне, как проходит ваш кофейный день, <get name="user-name"/>?
+				</li>
+			</random>
 		</template>
 	</category>
+
+
+
 </aiml>
