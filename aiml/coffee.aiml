@@ -124,6 +124,20 @@
 		</template>
 	</category>
 
+  <category>
+    <pattern>да</pattern>
+    <template>
+      Отлично! Что именно вас интересует? Могу поделиться рецептами, рассказать об истории кофе или ещё о чём-то?
+    </template>
+  </category>
+
+  <category>
+    <pattern>нет</pattern>
+    <template>
+      Жаль, что вы не заинтересованы. Если у вас возникнут вопросы или вы захотите узнать что-то позже, не стесняйтесь возвращаться. Удачного дня!
+    </template>
+  </category>
+  
 	<category>
 		<pattern>РАССКАЖИ О СЕБЕ</pattern>
 		<template>
